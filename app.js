@@ -1,6 +1,6 @@
-"use strict";
 const urlParams = new URLSearchParams(window.location.search);
 const search = urlParams.get('q');
+const zeroes = "00000000000000";
 var quickCopyOnSearch = "YES"
 var fuse;
 var db;
@@ -22,24 +22,24 @@ function updateList() {
 }
 
 function updateSearch(searchTerm) {
+    document.getElementById("barcode").value = "";
     if (searchTerm == "") {
-        JsBarcode("#barcode", "EMPTY", {
-               format: "ITF-14",
-               width:4,
-               height:40,
-               font: "monospace",
-               displayValue: true,
-               lineColor: "#000000"
-           });
+    	JsBarcode("#barcode", "00000000000000", {
+  format: "ITF",
+  text: "EMPTY/WRONG CODE",
+  width: 4,
+  height: 40,
+  displayValue: true
+});
     } else {
-        JsBarcode("#barcode", searchTerm, {
-               format: "ITF-14",
-               width:4,
-               height:40,
-               font: "monospace",
-               displayValue: false,
-               lineColor: "#000000"
-           });
+    prezeroes = zeroes.substr(0, (14 - searchTerm.length));
+    str = prezeroes + searchTerm
+    alert(str + " " + str.length)
+        JsBarcode("#barcode", str, {
+  format: "ITF",
+  width: 4,
+  height: 40,
+  displayValue: true
+});
     }
 }
-  
