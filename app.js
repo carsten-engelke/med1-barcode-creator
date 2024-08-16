@@ -24,11 +24,23 @@ function updateList() {
 
 function updateSearch(searchTerm) {
     if (searchTerm == "") {
-         JsBarcode("#barcode", "1234", {
-  format: "itf-14",
-  displayValue: true
-});
+        JsBarcode("#barcode", "EMPTY", {
+               format: "ITF-14",
+               width:4,
+               height:40,
+               font: "monospace",
+               displayValue: true,
+               lineColor: "#000000"
+           });
     } else {
+        JsBarcode("#barcode", searchTerm, {
+               format: "ITF-14",
+               width:4,
+               height:40,
+               font: "monospace",
+               displayValue: false,
+               lineColor: "#000000"
+           });
     }
 }
   
