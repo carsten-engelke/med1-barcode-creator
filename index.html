@@ -24,16 +24,11 @@
         />
         <button onclick="updateList()"><i class="fa fa-search"></i></button>
       </div>
+    
     </div>
-    <div id="result">
-      <svg id="barcode"></svg>
-    </div>
-    <script src="barcode.min.js"></script>
-    <script>
-      JsBarcode("#barcode", "1234", {
-        format: "itf-14"
-      })
-</script>
+        <svg id="barcode"></svg>
+
+    <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.0/dist/JsBarcode.all.min.js"></script>
     <script src="app.js"></script>
   </body>
 </html>
