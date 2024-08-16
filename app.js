@@ -16,7 +16,6 @@ searchBar.addEventListener('keyup', (e) => {
         }, 1000);
 });
 updateList();
-document.getElementById("message").style.visibility = "hidden"
 
 function updateList() {
     updateSearch(document.getElementById("searchbar").value);
