@@ -34,7 +34,6 @@ function updateSearch(searchTerm) {
     } else {
     prezeroes = zeroes.substr(0, (14 - searchTerm.length));
     str = prezeroes + searchTerm
-    alert(str + " " + str.length)
         JsBarcode("#barcode", str, {
   format: "ITF",
   width: 4,
