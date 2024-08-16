@@ -24,9 +24,11 @@ function updateList() {
 
 function updateSearch(searchTerm) {
     if (searchTerm == "") {
-         document.getElementById("result").innerHTML = "";
+         JsBarcode("#barcode", "1234", {
+  format: "itf-14",
+  displayValue: true
+});
     } else {
-         document.getElementById("result").innerHTML = "";
     }
 }
   
