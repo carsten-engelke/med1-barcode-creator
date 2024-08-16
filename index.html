@@ -29,6 +29,11 @@
       <svg id="barcode"></svg>
     </div>
     <script src="barcode.min.js"></script>
+    <script>
+      JsBarcode("#barcode", "1234", {
+        format: "itf-14"
+      })
+</script>
     <script src="app.js"></script>
   </body>
 </html>
