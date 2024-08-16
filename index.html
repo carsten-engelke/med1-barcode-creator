@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script
+      src="https://kit.fontawesome.com/582b6d0e8f.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Barcode für info4u - Medizinische Klinik I - UKSH</title>
+  </head>
+  <body>
+    <h1>Barcode für info4u - Medizinische Klinik I - UKSH</h1>
+    <div class="topnav">
+      <a href="https://www.uksh.de/innere1-luebeck/">Medizinische Klinik I - UKSH</a>
+      <div class="search-container">
+        <input
+          id="searchbar"
+          type="text"
+          placeholder="Fallnummer hier eingeben"
+          name="search"
+        />
+        <button onclick="updateList()"><i class="fa fa-search"></i></button>
+      </div>
+    </div>
+    <div class="messagebox" id="message">Loading templates...</div>
+    <div id="result"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
