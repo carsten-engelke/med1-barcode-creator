@@ -4,6 +4,23 @@ const zeroes = "00000000000000";
 var quickCopyOnSearch = "YES"
 var fuse;
 var db;
+import { Canvg } from 'https://cdn.skypack.dev/canvg@^4.0.0';
+let v = null;
+
+window.onload = async () => {
+  const canvas = document.querySelector('barcodeimagedl');
+  const ctx = canvas.getContext('2d');
+
+  v = await Canvg.fromString(ctx, document.querySelector('barcode'));
+
+  // Start SVG rendering with animations and mouse handling.
+  v.start();
+};
+
+window.onbeforeunload = () => {
+  v.stop();
+};
+
 if (search !== null && search !== "") {
     document.getElementById("searchbar").value = search;
 }
@@ -40,5 +57,5 @@ function updateSearch(searchTerm) {
   height: 40,
   displayValue: true
 });
-    }
+    }    
 }
